@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/*
+    에러 발생 url 컨트롤러
+ */
 @Controller
 public class ServletExController {
 

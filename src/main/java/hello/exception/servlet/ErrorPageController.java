@@ -6,6 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+/*
+    에러 페이지 매핑 컨트롤러(직접 접근x)
+ */
 @Slf4j
 @Controller
 public class ErrorPageController {
