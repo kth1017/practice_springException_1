@@ -33,3 +33,25 @@
 1 스레드 할당과 ServletRequest, ServletResponse를 할당
 2 필터 작동
 3 요청에 맞는 서블릿을 찾아 서블릿을 호출
+
+# 필터에 보통 스프링 시큐리티 적용해서 인증
+
+# 필터는 서블릿, 인터셉터는 스프링 mvc
+
+# http > 필터 > 서블릿 > 인터셉터 > 컨트롤러(mvc가 디스패쳐 서블릿이 시작점인걸 기억하면 쉬움)
+
+# 서블릿 필터는 doFilter만 호출해서 가끔 메서드를 까먹는 실수를 많이함
+
+# 인터셉터는 컨트롤러 호출 전, 호출 이후, 요청 이후 세 가지 구분
+- preHandle, postHandle, afterCompletion
+
+# 컨트롤러 예외가 터지면 postHandle은 x, 하지만 afterCompletion은 항상 호출됨(예외 정보 포함)
+
+# 인터셉터 = mvc 특화 필터 기능
+
+# mvc에서 사용하는 url 패턴은 따로 숙지
+
+# 필터는 생성 단에서 화이트리스트 등 경로를 지정해야하지만 인터셉터는 등록시에 체이닝을 통해 가능
+
+# 컨트롤러에서 sessionAttribute로 세션을 따로 받아 로직을 구현하지 않고 argumentResolver를 통해
+객체로 간단히 받게 구현 가능
