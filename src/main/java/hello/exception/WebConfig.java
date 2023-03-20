@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import javax.servlet.DispatcherType;
 import javax.servlet.Filter;
 
 @Configuration
@@ -21,7 +22,7 @@ public class WebConfig implements WebMvcConfigurer {
                 .excludePathPatterns("/css/**", "/*.icon", "/error");
     }
 
-    @Bean
+//    @Bean
     public FilterRegistrationBean logFilter(){
         FilterRegistrationBean<Filter> filterFilterRegistrationBean = new FilterRegistrationBean<>();
         //1
@@ -30,6 +31,8 @@ public class WebConfig implements WebMvcConfigurer {
         filterFilterRegistrationBean.setOrder(1);
         //3
         filterFilterRegistrationBean.addUrlPatterns("/*");
+        //4
+        filterFilterRegistrationBean.setDispatcherTypes(DispatcherType.REQUEST, DispatcherType.ERROR);
         return filterFilterRegistrationBean;
     }
 }
