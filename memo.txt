@@ -67,6 +67,11 @@
 
 # html은 basicCont로 충분하지만 api는 스펙이 너무 다양해서 부족 > exceptionHandler
 
-# 예외가 WAS까지 갔다가 다시 들어오면 비효율적 > resolver 사용
-
 # resolver는 was에 예외를 던지지않고 postHandle 단계에 예외를 처리하고 정상 응답
+
+# 이전 방법에선 예외가 was까지 던져지면 로그만 봐도 프로세스가 너무 비효율 > userHR 도입해서 예외를 아얘 다 처리
+
+# 하지만 리졸버를 직접 구현하자니 너무 코드가 김 > 스프링이 제공
+
+
+
