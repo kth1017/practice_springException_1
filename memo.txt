@@ -63,4 +63,10 @@
 
 # api요청시 리졸버 이용(스프링 인터페이스를 구현하기만 하면 됨)
 
+# 스프링부트 기본 api 오류시 baasicController 호출(html / api 분리)
+
+# html은 basicCont로 충분하지만 api는 스펙이 너무 다양해서 부족 > exceptionHandler
+
 # 예외가 WAS까지 갔다가 다시 들어오면 비효율적 > resolver 사용
+
+# resolver는 was에 예외를 던지지않고 postHandle 단계에 예외를 처리하고 정상 응답
