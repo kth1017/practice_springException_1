@@ -73,5 +73,9 @@
 
 # 하지만 리졸버를 직접 구현하자니 너무 코드가 김 > 스프링이 제공
 
+# exceptionResolver 스프링 우선 순위 > 1 exceptionHandler 2 responseStatus 3 DefaultHandler
+
+
+
 
 
